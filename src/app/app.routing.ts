@@ -1,4 +1,4 @@
-import { ModuleWithProviders }  from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
@@ -10,8 +10,8 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   {
-  	path: 'login',
-  	component: LoginComponent
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
