@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   password: string;
 
   constructor (private loginService: LoginService) {
-    if (localStorage.getItem('PortalAdminHasLoggedIn') === '' || localStorage.getItem('PortalAdminHasLoggedIn') == null) {
+    if(localStorage.getItem('PortalAdminHasLoggedIn') == '' || localStorage.getItem('PortalAdminHasLoggedIn') == null) {
       this.loggedIn = false;
     } else {
       this.loggedIn = true;
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.loginService.sendCredential(this.username, this.password).subscribe(
       res => {
-        this.loggedIn = true;
+        this.loggedIn=true;
         localStorage.setItem('PortalAdminHasLoggedIn', 'true');
         location.reload();
       },
