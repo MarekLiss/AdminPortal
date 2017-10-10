@@ -11,13 +11,15 @@ import { LoginComponent } from './login/login.component';
 
 import { LoginService } from './login.service';
 import { FooterComponent } from './footer/footer.component';
+import { UserAccountComponent } from './user-account/user-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    UserAccountComponent
   ],
   imports: [
     BrowserModule,
