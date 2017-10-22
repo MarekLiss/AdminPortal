@@ -4,7 +4,7 @@ import {Http, Headers} from '@angular/http';
 @Injectable()
 export class UserService {
 
-  constructor (private http: Http){}
+  constructor (private http: Http) {}
 
   getUsers() {
     const url = 'http://localhost:8080/api/user/all';
