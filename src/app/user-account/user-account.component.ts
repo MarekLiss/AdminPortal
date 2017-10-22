@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-account',
@@ -7,7 +9,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserAccountComponent implements OnInit {
 
-  constructor() { }
+  userList: Object[];
+
+  constructor(private userService: UserService, private router: Router) {
+    this.getUsers();
+  }
+
+  getUsers() {
+    this.userService.getUsers().subscribe(
+      res => {
+        this.userList = JSON.parse(JSON.parse(JSON.stringify(res))._body);
+      },
+      error => console.log(error)
+    );
+  }
+
+  onSelectPrimary(username: string) {
+    this.router.navigate(['/primaryTransaction', username]);
+  }
+
+  onSelectSavings(username: string) {
+    this.router.navigate(['/savingsTransaction', username]);
+  }
+
+  enableUser(username: string) {
+    this.userService.enableUser(username).subscribe();
+    location.reload();
+  }
+
+  disableUser(username: string) {
+    this.userService.disableUser(username).subscribe();
+    location.reload();
+  }
+
 
   ngOnInit() {
   }

@@ -13,6 +13,8 @@ import { LoginService } from './login.service';
 import { FooterComponent } from './footer/footer.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 
+import { UserService} from './user.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { UserAccountComponent } from './user-account/user-account.component';
     routing
   ],
   providers: [
-    LoginService
+    LoginService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
