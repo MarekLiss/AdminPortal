@@ -15,6 +15,7 @@ import { UserAccountComponent } from './user-account/user-account.component';
 
 import { UserService} from './user.service';
 import { PrimaryTransactionComponent } from './primary-transaction/primary-transaction.component';
+import { SavingsTransactionComponent } from './savings-transaction/savings-transaction.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PrimaryTransactionComponent } from './primary-transaction/primary-trans
     LoginComponent,
     FooterComponent,
     UserAccountComponent,
-    PrimaryTransactionComponent
+    PrimaryTransactionComponent,
+    SavingsTransactionComponent
   ],
   imports: [
     BrowserModule,
