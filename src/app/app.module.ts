@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 
 import { UserService} from './user.service';
+import { PrimaryTransactionComponent } from './primary-transaction/primary-transaction.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserService} from './user.service';
     NavbarComponent,
     LoginComponent,
     FooterComponent,
-    UserAccountComponent
+    UserAccountComponent,
+    PrimaryTransactionComponent
   ],
   imports: [
     BrowserModule,
