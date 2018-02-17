@@ -10,8 +10,8 @@ import { Chart } from 'chart.js';
 })
 
 export class PrimaryTransactionComponent implements OnInit {
-  
-  
+
+
   depositDates = [];
   username: string;
   primaryTransactionList: Object[];
@@ -19,10 +19,12 @@ export class PrimaryTransactionComponent implements OnInit {
   chart = [];
 
   constructor(private route: ActivatedRoute, private userService: UserService) {
-    this.route.params.forEach((params: Params) => {
-      this.username = params['username'];
-    });
+  }
 
+   ngOnInit() {
+    this.route.params.forEach((params: Params) => {
+        this.username = params['username'];
+    });
     this.getPrimaryTransactionList();
   }
 
@@ -65,9 +67,4 @@ export class PrimaryTransactionComponent implements OnInit {
       error => console.log(error)
     );
   }
-
-  ngOnInit() {
-
-  }
-
 }
